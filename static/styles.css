@@ -1,0 +1,39 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  height: fit-content;
+  width: 100%;
+  /* position: fixed; TRY TO KEEP IT THERE */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-around;
+  background-color: #ffe69a;
+}
+header ul {
+  list-style: none;
+}
+li {
+  margin-right: 2em;
+  display: inline-block;
+}
+.intro {
+  font-size: 7vw;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  margin: 0 2em;
+}
+.about {
+  flex-direction: column;
+}
+
+.full-viewport {
+  height: 100vh;
+}
