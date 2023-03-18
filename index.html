@@ -8,72 +8,126 @@
     <title>My website</title>
   </head>
   <body>
-    <header class="header">
-      <div class="center">
-        <h1>Orlandi Tommaso</h1>
-      </div>
-      <div class="right">
-        <ul>
-          <li><a href="#aboutSection">About</a></li>
-          <li><a href="#projectsSection">Projects</a></li>
-          <li><a href="https://github.com/benante">GitHub</a></li>
-        </ul>
-      </div>
-    </header>
-    <section id="intro-section">
-      <div class="flex intro">
-        Hello, here I am trying to become a web developer
-      </div>
-    </section>
-    <section id="about-section">
-      <div class="flex about full-viewport">
-        <h1>Who</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-        </p>
-        <h2>When</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-        </p>
-        <h1>What</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-        </p>
-        <h1>Where</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-        </p>
-        <h1>How</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-        </p>
-      </div>
-    </section>
-    <script src="app.js"></script>
+    <div class="container">
+      <section id="introSection">
+        <header class="header">
+          <div class="center">
+            <h1>Orlandi Tommaso</h1>
+          </div>
+          <div class="right">
+            <ul>
+              <li><a href="#introSection">About</a></li>
+              <li><a href="aboutSection">Projects</a></li>
+              <li><a href="https://github.com/benante">GitHub</a></li>
+            </ul>
+          </div>
+        </header>
+        <div class="flex intro">
+          Hello, here I am trying to become a web developer
+        </div>
+      </section>
+      <section id="aboutSection">
+        <div class="flex about full-viewport">
+          <h1>Who</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          </p>
+          <h2>When</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          </p>
+          <h1>What</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad
+          </p>
+          <h1>Where</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad
+          </p>
+          <h1>How</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          </p>
+        </div>
+      </section>
+      <section id="projects">
+        <div class="full-viewport" id="gallery-projects">
+          <div class="card">
+            <a
+              class="title-container"
+              href="https://benante.github.io/Hobbies-page/"
+              target="_blank"
+            >
+              <img src="static/images/hobbies.png" alt="hobbies page" />
+              <h3 class="card-name">Hobbies page</h3>
+            </a>
+            <p>
+              Easy page where I list my hobbies.Mostly html and css, there's an
+              hint of Javascript that show what day it is
+            </p>
+            <a href="https://github.com/benante/Hobbies-page.git">Github</a>
+          </div>
+          <div class="card">
+            <a
+              class="title-container"
+              href="https://benante.github.io/Project-Gallery/"
+              target="_blank"
+              ><img src="static/images/gallery.png" alt="project gallery" />
+              <h3 class="card-name">Project gallery</h3></a
+            >
+            <p>Gallery that displays my project through flexbox</p>
+            <a href="">Github</a>
+          </div>
+          <div class="card">
+            <a
+              class="title-container"
+              href="https://benante.github.io/Comment-box/"
+              target="_blank"
+              ><img src="static/images/comment_box.png" alt="comment box" />
+              <h3 class="card-name">Comment box</h3></a
+            >
+            <p>
+              Insert a comment and display it straight away through DOM
+              manipulation
+            </p>
+            <a href="">Github</a>
+          </div>
+          <div class="card">
+            <a
+              class="title-container"
+              href="https://benante.github.io/project_n4_movieData/"
+              target="_blank"
+              ><img src="static/images/movie_data.png" alt="movie data" />
+              <h3 class="card-name">Movie data</h3></a
+            >
+            <a href="">Github</a>
+          </div>
+          <div class="card">
+            <a
+              class="title-container"
+              href="https://benante.github.io/project_n5_game/"
+              target="_blank"
+              ><img
+                src="static/images/game.png"
+                alt="rock paper scissors game"
+              />
+              <h3 class="card-name">Game</h3></a
+            >
+            <a href="">Github</a>
+          </div>
+        </div>
+      </section>
+      <script src="app.js"></script>
+    </div>
   </body>
 </html>

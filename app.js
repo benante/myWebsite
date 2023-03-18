@@ -6,3 +6,4 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(intro);
   intro.style.height = "calc(100vh - " + headerHeight + "px)";
 });
+const sections = document.querySelectorAll("section");
