@@ -3,18 +3,25 @@ body {
   box-sizing: border-box;
   font-family: sans-serif;
 }
-.container {
+header,
+.container,
+.intro {
   margin: 0 10px 0 60px;
+}
+
+.grid,
+.form-container {
+  margin: 0 auto;
+  max-width: 90%;
+}
+.container {
+  padding: 0 5em;
 }
 .header {
   height: fit-content;
   width: 100%;
-  /* position: fixed; TRY TO KEEP IT THERE */
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: space-around;
 }
 header ul {
   list-style: none;
@@ -36,7 +43,6 @@ hr {
   top: 0;
   left: 0;
   bottom: 0;
-  height: 100vh;
   width: 60px;
   z-index: 9999;
   background-color: rgb(157, 155, 155);
@@ -50,6 +56,11 @@ hr {
 }
 .vertical-navbar img {
   width: 100%;
+}
+.footer {
+  margin-top: 3em;
+  margin-bottom: 1em;
+  font-size: 0.5em;
 }
 /* DIVS  */
 .intro {
@@ -65,29 +76,53 @@ hr {
 .intro p {
   font-size: medium;
 }
-.about {
+.grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
   gap: 1em;
-  width: 80%;
-  margin: 0 auto;
+  width: 90%;
+  grid-template-columns: 1fr 1fr;
 }
-.about p {
+.grid p {
   margin: 0;
 }
+
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid black;
-  width: 20em;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 2px 2px black;
+  gap: 5px;
+  justify-content: space-between;
+  padding: 1em;
+}
+.links {
+  text-align: center;
+  cursor: pointer;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  align-items: self-start;
 }
 
 /* IMGS */
-img {
-  /* Temp width*/
-  width: 50%;
+.right-column img {
+  width: 70%;
+  border-radius: 10px;
 }
-.icon {
-  width: 10%;
+.vertical-navbar img {
+  width: 90%;
+}
+.card img {
+  max-width: 10%;
+}
+/* FONTS */
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
 }

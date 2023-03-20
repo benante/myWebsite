@@ -19,29 +19,28 @@
         />
       </a>
     </nav>
-    <div class="container">
-      <section id="introSection">
-        <header class="header">
-          <div class="right">
-            <ul>
-              <li><a href="#introSection">About</a></li>
-              <li><a href="#aboutSection">Projects</a></li>
-              <li><a href="https://github.com/benante">GitHub</a></li>
-            </ul>
-          </div>
-        </header>
-
-        <div class="intro">
-          <h1>Hello, my name is</h1>
-          <h1 class="highlight">Tommaso Orlandi.</h1>
-          <h1>I am studying to become a web developer</h1>
-          <p>Something about me very brief</p>
+    <section id="introSection">
+      <header class="header">
+        <div class="right">
+          <ul>
+            <li><a href="#aboutSection">About</a></li>
+            <li><a href="#projectsSection">Projects</a></li>
+          </ul>
         </div>
-      </section>
+      </header>
+
+      <div class="intro">
+        <h1>Hello, my name is</h1>
+        <h1 class="highlight">Tommaso Orlandi.</h1>
+        <h1>I am studying to become a web developer</h1>
+        <p>Something about me very brief</p>
+      </div>
+    </section>
+    <div class="container">
       <section id="aboutSection">
         <h1>About me</h1>
         <hr />
-        <div class="about">
+        <div class="grid about">
           <div class="left-column">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -65,14 +64,16 @@
           </div>
         </div>
       </section>
-      <section id="projects">
+      <section id="projectsSection">
         <!-- CARDS -->
         <h1>My projects</h1>
         <hr />
-        <div class="" id="gallery-projects">
+        <div class="grid projects" id="gallery-projects">
           <div class="card">
             <h3>Hobby Page</h3>
-            <p>Insert Description</p>
+            <p>
+              Simple web page with some basic html,css and a hint of javascript
+            </p>
             <div class="links">
               <img class="icon" src="static/images/preview.png" alt="preview" />
               <a href="https://github.com/benante/Hobbies-page.git"
@@ -92,7 +93,7 @@
           </div>
           <div class="card">
             <h3>Gallery Project</h3>
-            <p>Insert Description</p>
+            <p>Learning how to use flexbox for a more complex layout</p>
             <div class="links">
               <img class="icon" src="static/images/preview.png" alt="preview" />
               <a href="https://github.com/benante/Project-Gallery.git"
@@ -112,7 +113,7 @@
           </div>
           <div class="card">
             <h3>Comment Box</h3>
-            <p>Insert Description</p>
+            <p>Use a form to submit a comment through dom manipulation</p>
             <div class="links">
               <img class="icon" src="static/images/preview.png" alt="preview" />
               <a href="https://github.com/benante/Comment-box.git"
@@ -132,7 +133,7 @@
           </div>
           <div class="card">
             <h3>Movie Data</h3>
-            <p>Insert Description</p>
+            <p>Populate a web page with data from a javascript object</p>
             <div class="links">
               <img class="icon" src="static/images/preview.png" alt="preview" />
               <a href="https://github.com/benante/project_n4_movieData.git"
@@ -152,7 +153,7 @@
           </div>
           <div class="card">
             <h3>Game</h3>
-            <p>Insert Description</p>
+            <p>Rock paper scissors based on html, css & javascript</p>
             <div class="links">
               <img class="icon" src="static/images/preview.png" alt="preview" />
               <a href="https://github.com/benante/project_n5_game.git"
@@ -170,21 +171,29 @@
               /></a>
             </div>
           </div>
-          <section id="Contact">
-            <form action="">
-              <label for="name">Name</label>
-              <input type="text" />
-              <label for="email">Email</label>
-              <input type="email" />
-              <label for="subject">Subject</label>
-              <input type="text" />
-              <label for="message">Message</label>
-              <textarea name="" id="" cols="30" rows="10"></textarea>
-            </form>
-          </section>
         </div>
       </section>
+      <section id="Contact">
+        <h1>Contacts</h1>
+        <hr />
+        <form class="form-container" action="">
+          <label for="name">Name</label>
+          <input type="text" />
+          <label for="email">Email</label>
+          <input type="email" />
+          <label for="subject">Subject</label>
+          <input type="text" />
+          <label for="message">Message</label>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </form>
+      </section>
       <script src="app.js"></script>
+      <footer class="footer">
+        All icons created by
+        <a href="https://www.flaticon.com/authors/freepik" title="icons"
+          >Freepik - Flaticon</a
+        >
+      </footer>
     </div>
   </body>
 </html>
