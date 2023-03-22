@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="static/styles.css" />
+
     <title>My website</title>
   </head>
   <body>
+    <!-- Vertical Navbar with github link -->
     <nav class="vertical-navbar">
       <a href="https://github.com/benante">
         <img
@@ -20,6 +22,7 @@
     </nav>
     <section id="introSection">
       <header class="header">
+        <!-- Horizontal navbar -->
         <div class="nav">
           <ul>
             <li><a href="#aboutSection">About</a></li>
@@ -28,16 +31,18 @@
           </ul>
         </div>
       </header>
-
+      <!-- Intro  -->
       <div class="intro">
         <h1>Hello, my name is</h1>
         <h1 class="highlight">Tommaso Orlandi.</h1>
         <h1>I am studying to become a web developer</h1>
-        <p>Something about me very brief</p>
+        <p><em>From philosophy to brewing, it's now time to code.</em></p>
       </div>
     </section>
+    <!-- Main Container -->
     <div class="container">
       <section id="aboutSection">
+        <!-- About me section grid -->
         <h1 class="title-section">About me</h1>
         <hr />
         <div class="grid about">
@@ -49,26 +54,18 @@
             />
           </div>
           <div class="left-column">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad
-            </p>
-            <h2>Skills</h2>
+            <p>What should I say about me?</p>
+            <h2>Basic knowledge of:</h2>
             <p>Python Js css html</p>
           </div>
         </div>
       </section>
+      <!-- Project Section -->
       <section id="projectsSection">
         <!-- CARDS -->
         <h1 class="title-section">My projects</h1>
         <hr />
-
+        <!-- Hobbies -->
         <div class="grid projects" id="gallery-projects">
           <div class="card">
             <h3>Hobby Page</h3>
@@ -81,7 +78,11 @@
               Simple web page with some basic html,css and a hint of javascript
             </p>
             <div class="links">
-              <img class="icon" src="static/images/preview.png" alt="preview" />
+              <img
+                class="icon preview-btn"
+                src="static/images/preview.png"
+                alt="preview"
+              />
               <a href="https://github.com/benante/Hobbies-page.git"
                 ><img
                   class="icon"
@@ -97,6 +98,7 @@
               /></a>
             </div>
           </div>
+          <!-- Gallery -->
           <div class="card">
             <h3>Gallery Project</h3>
             <img
@@ -106,7 +108,11 @@
             />
             <p>Learning how to use flexbox for a more complex layout</p>
             <div class="links">
-              <img class="icon" src="static/images/preview.png" alt="preview" />
+              <img
+                class="icon preview-btn"
+                src="static/images/preview.png"
+                alt="preview"
+              />
               <a href="https://github.com/benante/Project-Gallery.git"
                 ><img
                   class="icon"
@@ -123,6 +129,7 @@
             </div>
           </div>
           <div class="card">
+            <!-- Comment box -->
             <h3>Comment Box</h3>
             <img
               class="preview"
@@ -131,7 +138,11 @@
             />
             <p>Use a form to submit a comment through dom manipulation</p>
             <div class="links">
-              <img class="icon" src="static/images/preview.png" alt="preview" />
+              <img
+                class="icon preview-btn"
+                src="static/images/preview.png"
+                alt="preview"
+              />
               <a href="https://github.com/benante/Comment-box.git"
                 ><img
                   class="icon"
@@ -148,6 +159,7 @@
             </div>
           </div>
           <div class="card">
+            <!-- Movie data -->
             <h3>Movie Data</h3>
             <img
               class="preview"
@@ -156,7 +168,11 @@
             />
             <p>Populate a web page with data from a javascript object</p>
             <div class="links">
-              <img class="icon" src="static/images/preview.png" alt="preview" />
+              <img
+                class="icon preview-btn"
+                src="static/images/preview.png"
+                alt="preview"
+              />
               <a href="https://github.com/benante/project_n4_movieData.git"
                 ><img
                   class="icon"
@@ -173,11 +189,16 @@
             </div>
           </div>
           <div class="card">
+            <!-- Game -->
             <h3>Game</h3>
             <img class="preview" src="static/images/game.png" alt="game" />
             <p>Rock paper scissors based on html, css & javascript</p>
             <div class="links">
-              <img class="icon" src="static/images/preview.png" alt="preview" />
+              <img
+                class="icon preview-btn"
+                src="static/images/preview.png"
+                alt="preview"
+              />
               <a href="https://github.com/benante/project_n5_game.git"
                 ><img
                   class="icon"
@@ -195,22 +216,27 @@
           </div>
         </div>
       </section>
+      <!-- Contact section -->
       <section id="contactsSection">
         <h1 class="title-section">Contacts</h1>
         <hr />
-        <form class="form-container" action="">
-          <label for="name">Name</label>
-          <input type="text" />
-          <label for="email">Email</label>
-          <input type="email" />
-          <label for="subject">Subject</label>
-          <input type="text" />
-          <label for="message">Message</label>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-        </form>
+        <div class="form">
+          <form class="form-container" action="">
+            <label for="name">Name</label>
+            <input type="text" />
+            <label for="email">Email</label>
+            <input type="email" />
+            <label for="subject">Subject</label>
+            <input type="text" />
+            <label for="message">Message</label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </section>
       <script src="app.js"></script>
       <footer class="footer">
+        <!-- Icons attribution -->
         All icons created by
         <a href="https://www.flaticon.com/authors/freepik" title="icons"
           >Freepik - Flaticon</a
