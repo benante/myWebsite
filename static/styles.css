@@ -1,24 +1,15 @@
 html,
 body {
+  width: 100vw;
+  margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-}
-header,
-.container,
-.intro {
-  margin: 0 10px 0 60px;
+  display: grid;
+  grid-template-columns: 60px auto;
 }
 
-.grid,
-.form-container {
-  margin: 0 auto;
-  max-width: 90%;
-}
-.container {
-  padding: 0 5em;
-}
 .header {
-  height: fit-content;
+  grid-column: 2/3;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -30,6 +21,20 @@ li {
   margin-right: 3em;
   display: inline-block;
 }
+section,
+.container {
+  grid-column: 2/3;
+}
+
+.intro,
+.container {
+  margin: 0 1em;
+}
+.about,
+.grid,
+.form-container {
+  margin: 0 2em;
+}
 h1,
 hr {
   display: inline-block;
@@ -40,6 +45,7 @@ hr {
 }
 .vertical-navbar {
   position: fixed;
+  grid-column: 1/2;
   top: 0;
   left: 0;
   bottom: 0;
@@ -49,19 +55,15 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  border-right: 1px solid;
 }
-.vertical-navbar hr {
-  width: 30%;
-  transform: rotate(90deg);
-}
-.vertical-navbar img {
-  width: 100%;
-}
+
 .footer {
   margin-top: 3em;
   margin-bottom: 1em;
   font-size: 0.5em;
 }
+
 /* DIVS  */
 .intro {
   height: 100vh;
@@ -79,8 +81,6 @@ hr {
 .grid {
   display: grid;
   gap: 1em;
-  width: 90%;
-  grid-template-columns: 1fr 1fr;
 }
 .grid p {
   margin: 0;
@@ -91,7 +91,6 @@ hr {
   flex-direction: column;
   align-items: center;
   border: 1px solid black;
-  width: 60%;
   border-radius: 10px;
   box-shadow: 2px 2px black;
   gap: 5px;
@@ -100,7 +99,6 @@ hr {
 }
 .links {
   text-align: center;
-  cursor: pointer;
 }
 .form-container {
   display: flex;
@@ -110,16 +108,18 @@ hr {
 }
 
 /* IMGS */
+.vertical-navbar img {
+  width: 100%;
+}
+
 .right-column img {
-  width: 70%;
+  max-width: 100%;
   border-radius: 10px;
 }
-.vertical-navbar img {
-  width: 90%;
-}
+
 .card .icon {
   margin-top: 1rem;
-  max-width: 20%;
+  max-width: 30px;
 }
 .preview {
   display: none;
@@ -134,6 +134,30 @@ a {
   text-decoration: none;
   color: black;
   font-weight: 700;
+}
+
+@media (min-width: 400px) {
+  .card {
+    background-color: cadetblue;
+  }
+  .projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .container {
+    max-width: 600px;
+  }
+}
+@media (min-width: 500px) {
+  .about {
+    grid-template-columns: 1fr 1fr;
+  }
+  .left-column {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .right-column {
+    grid-column: 2/3;
+  }
 }
 
 /* TRYING BUZZ EFFECT */
