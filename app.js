@@ -22,7 +22,7 @@ const navbar = document.querySelector(".vertical-navbar");
 // Add a scroll event listener to the window object
 window.addEventListener("scroll", function () {
   // Check if the user has scrolled 100 pixels or more to the right
-  if (window.scrollX >= 100) {
+  if (window.scrollX <= 100) {
     // Show the vertical navbar
     navbar.style.display = "block";
   } else {
