@@ -17,6 +17,20 @@ window.addEventListener("scroll", function () {
   myName.style.color = colors[colorIndex];
 });
 
+const navbar = document.querySelector(".vertical-navbar");
+
+// Add a scroll event listener to the window object
+window.addEventListener("scroll", function () {
+  // Check if the user has scrolled 100 pixels or more to the right
+  if (window.scrollX >= 100) {
+    // Show the vertical navbar
+    navbar.style.display = "block";
+  } else {
+    // Hide the vertical navbar
+    navbar.style.display = "none";
+  }
+});
+
 // Add preview
 const cards = document.querySelectorAll(".card");
 cards.forEach((card) => {
@@ -43,12 +57,21 @@ const images = [
 ];
 let currentImageIndex = 0;
 
-setInterval(function () {
+function shakeImage() {
+  image.classList.add("buzz");
+  setTimeout(() => {
+    image.classList.remove("buzz");
+  }, 2000);
+}
+
+setInterval(() => {
+  shakeImage();
+  switchImage();
+}, 10000);
+
+// Function to switch images
+function switchImage() {
+  // Switch to different indexes through the remainder operator
   currentImageIndex = (currentImageIndex + 1) % images.length;
-  console.log(currentImageIndex);
-  image.style.opacity = 0;
-  setTimeout(function () {
-    image.src = images[currentImageIndex];
-    image.style.opacity = 1;
-  }, 1); // Change image after 1 second transition
-}, 5000); // Change image every 10 seconds
+  image.src = images[currentImageIndex];
+}

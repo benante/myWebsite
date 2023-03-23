@@ -96,7 +96,7 @@ hr {
   align-items: center;
   border: 1px solid black;
   border-radius: 10px;
-  box-shadow: 2px 2px black;
+  box-shadow: 1px 1px black;
   gap: 5px;
   justify-content: space-between;
   padding: 1em;
@@ -184,30 +184,49 @@ a {
     grid-column: 2/3;
   }
 }
-
-/* TRYING BUZZ EFFECT */
-.portrait {
-  animation: shake 1.5s;
-  animation-iteration-count: initial;
+@media only screen and (max-width: 480px) {
+  .vertical-navbar {
+    display: none;
+  }
 }
 
-@keyframes shake {
+/* TRYING BUZZ EFFECT */
+.buzz {
+  animation: buzz 0.5s linear;
+}
+
+@keyframes buzz {
   0% {
     transform: translate(0, 0) rotate(0deg);
   }
+  10% {
+    transform: translate(-1px, -1px) rotate(-0.5deg);
+  }
   20% {
-    transform: translate(-1px, 0) rotate(1deg);
+    transform: translate(1px, 1px) rotate(0.5deg);
+  }
+  30% {
+    transform: translate(-1px, 1px) rotate(-0.5deg);
   }
   40% {
-    transform: translate(1px, 0) rotate(1deg);
+    transform: translate(1px, -1px) rotate(0.5deg);
+  }
+  50% {
+    transform: translate(-1px, 1px) rotate(-0.5deg);
   }
   60% {
-    transform: translate(-1px, 0) rotate(-1deg);
+    transform: translate(1px, -1px) rotate(0.5deg);
+  }
+  70% {
+    transform: translate(-1px, -1px) rotate(-0.5deg);
   }
   80% {
-    transform: translate(1px, 0) rotate(1deg);
+    transform: translate(1px, 1px) rotate(0.5deg);
+  }
+  90% {
+    transform: translate(-1px, -1px) rotate(-0.5deg);
   }
   100% {
-    transform: translate(0, 0) rotate(0deg);
+    transform: translate(1px, 1px) rotate(0.5deg);
   }
 }
