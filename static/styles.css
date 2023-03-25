@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+/* HTML & BODY */
 html,
 body {
   width: 100vw;
@@ -8,8 +13,8 @@ body {
   grid-template-columns: 60px auto;
 }
 
+/* HEADER */
 .header {
-  grid-column: 2/3;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -21,30 +26,31 @@ li {
   margin-right: 3em;
   display: inline-block;
 }
+
+/* GRID  */
+.header,
 section,
 .container {
   grid-column: 2/3;
 }
+.grid {
+  display: grid;
+  gap: 1em;
+}
+.projects {
+  align-items: start;
+}
 
-.intro,
-.container {
-  margin: 0 1em;
+/* DIVS  */
+.intro {
+  height: 100vh;
+  font-size: 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.about,
-.grid,
-.form {
-  margin: 0 2em;
-}
-.title-section {
-  margin-left: 1em;
-}
-h1,
-hr {
-  display: inline-block;
-}
-hr {
-  width: 20%;
-  color: black;
+.intro * {
+  margin: 0;
 }
 .vertical-navbar {
   position: fixed;
@@ -60,36 +66,9 @@ hr {
   justify-content: end;
   border-right: 1px solid;
 }
-
-.footer {
-  margin-top: 3em;
-  margin-bottom: 1em;
-  font-size: 0.5em;
-}
-
-/* DIVS  */
-.intro {
-  height: 100vh;
-  font-size: 7vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.intro * {
-  margin: 0;
-}
-.intro p {
-  font-size: medium;
-}
-.grid {
-  display: grid;
-  gap: 1em;
-}
-.grid p {
-  margin: 0;
-}
-
+/* card */
 .card {
+  text-align: center;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -101,13 +80,24 @@ hr {
   justify-content: space-between;
   padding: 1em;
 }
-
+.card:hover {
+  box-shadow: 5px 5px black;
+}
 .links {
   text-align: center;
 }
 .preview-btn:hover {
   cursor: pointer;
 }
+.popUp {
+  display: block;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 11px black;
+}
+
+/* FORM */
 .form-container {
   display: flex;
   flex-direction: column;
@@ -120,40 +110,40 @@ hr {
   border: 1px solid black;
 }
 
+/* FOOTER */
+.footer {
+  margin-top: 3em;
+  margin-bottom: 1em;
+  font-size: 0.5em;
+}
+
 /* IMGS */
 .vertical-navbar img {
   width: 100%;
 }
-
 .right-column img {
-  max-width: 100%;
+  max-width: 50%;
   border-radius: 10px;
 }
-
 .card .icon {
   margin-top: 1rem;
   max-width: 30px;
 }
-
 .preview {
   display: none;
 }
-.popUp {
-  display: block;
-  position: absolute;
-  width: 100%;
-  border: 1px solid black;
-  border-radius: 10px;
-  box-shadow: 0 11px black;
-}
-.adjustCard {
-  /* Adjustment of card when pop Up opens */
-  padding: 0;
-  height: max-content;
-}
+
 /* FONTS */
+.intro p {
+  font-size: medium;
+}
 p {
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5em;
+}
+h1,
+.card {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 a {
   text-decoration: none;
@@ -161,15 +151,47 @@ a {
   font-weight: 700;
 }
 
-@media (min-width: 400px) {
+/* MARGINS */
+.intro,
+.container {
+  margin: 0 1em;
+}
+.about,
+.grid,
+.form {
+  margin: 0 2em;
+}
+.title-section {
+  margin-left: 1em;
+}
+
+/* HR */
+h1,
+hr {
+  display: inline-block;
+}
+hr {
+  width: 20%;
+  color: black;
+  margin-left: 0.5em;
+}
+
+/* MEDIA */
+@media (min-width: 600px) {
   .projects {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .container {
-    max-width: 600px;
+  .portrait {
+    /* In order to be on the same line with paragraph next to it.Due to <p> line height */
+    margin-top: 1em;
   }
 }
 @media (min-width: 500px) {
+  .projects,
+  .form {
+    max-width: 600px;
+  }
+
   .intro {
     font-size: 4vw;
   }
@@ -184,49 +206,49 @@ a {
     grid-column: 2/3;
   }
 }
-@media only screen and (max-width: 480px) {
-  .vertical-navbar {
-    display: none;
+@media (max-width: 900px) {
+  .right-column img {
+    min-width: 200px;
   }
 }
 
-/* TRYING BUZZ EFFECT */
+/* ANIMATION */
 .buzz {
   animation: buzz 0.5s linear;
 }
 
 @keyframes buzz {
   0% {
-    transform: translate(0, 0) rotate(0deg);
+    transform: translate(0, 0);
   }
   10% {
-    transform: translate(-1px, -1px) rotate(-0.5deg);
+    transform: translate(-1px, -1px);
   }
   20% {
-    transform: translate(1px, 1px) rotate(0.5deg);
+    transform: translate(1px, 1px);
   }
   30% {
-    transform: translate(-1px, 1px) rotate(-0.5deg);
+    transform: translate(-1px, 1px);
   }
   40% {
-    transform: translate(1px, -1px) rotate(0.5deg);
+    transform: translate(1px, -1px);
   }
   50% {
-    transform: translate(-1px, 1px) rotate(-0.5deg);
+    transform: translate(-1px, 1px);
   }
   60% {
-    transform: translate(1px, -1px) rotate(0.5deg);
+    transform: translate(1px, -1px);
   }
   70% {
-    transform: translate(-1px, -1px) rotate(-0.5deg);
+    transform: translate(-1px, -1px);
   }
   80% {
-    transform: translate(1px, 1px) rotate(0.5deg);
+    transform: translate(1px, 1px);
   }
   90% {
-    transform: translate(-1px, -1px) rotate(-0.5deg);
+    transform: translate(-1px, -1px);
   }
   100% {
-    transform: translate(1px, 1px) rotate(0.5deg);
+    transform: translate(1px, 1px);
   }
 }

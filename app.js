@@ -4,8 +4,8 @@ const myName = document.querySelector(".highlight");
 const colors = [
   "LightSkyBlue",
   "SteelBlue",
-  "RoyalBlue",
   "CornflowerBlue",
+  "RoyalBlue",
   "DarkBlue",
   "black",
 ];
@@ -13,22 +13,8 @@ const colors = [
 // Change color of my name during scrolling
 window.addEventListener("scroll", function () {
   const scrollPos = window.scrollY;
-  const colorIndex = Math.floor(scrollPos / 5) % colors.length;
+  const colorIndex = Math.floor(scrollPos / 35) % colors.length;
   myName.style.color = colors[colorIndex];
-});
-
-const navbar = document.querySelector(".vertical-navbar");
-
-// Add a scroll event listener to the window object
-window.addEventListener("scroll", function () {
-  // Check if the user has scrolled 100 pixels or more to the right
-  if (window.scrollX <= 100) {
-    // Show the vertical navbar
-    navbar.style.display = "block";
-  } else {
-    // Hide the vertical navbar
-    navbar.style.display = "none";
-  }
 });
 
 // Add preview
@@ -37,37 +23,43 @@ cards.forEach((card) => {
   let popUp = card.querySelector(".preview");
   let preview_btn = card.querySelector(".preview-btn");
   preview_btn.addEventListener("click", () => {
-    popUp.classList.add("popUp");
-    card.classList.add("adjustCard");
+    // open/close with btn
+    if (popUp.classList.contains("popUp")) {
+      popUp.classList.remove("popUp");
+    } else {
+      popUp.classList.add("popUp");
+    }
   });
+  // or close directly clicking on the preview
   popUp.addEventListener("click", function (event) {
     if (event.target === this) {
       this.classList.remove("popUp");
-      card.classList.remove("adjustCard");
     }
   });
 });
 
 const image = document.querySelector(".portrait");
-// console.log(image);
-// image.src = "static/images/meBlackWhite.jpeg";
 const images = [
   "static/images/meBlackWhite.jpeg",
   "static/images/mePixelated.jpeg",
 ];
 let currentImageIndex = 0;
 
+// Infinite loop: every 10 seconds starts the buzzing effect and switch to the next img in 0.5 sec.
+setInterval(() => {
+  shakeImage();
+  setTimeout(() => {
+    switchImage();
+  }, 500);
+}, 10000);
+
+// Function to create a buzzing effect on a img.It adds the class for the animation and remove after 2 seconds
 function shakeImage() {
   image.classList.add("buzz");
   setTimeout(() => {
     image.classList.remove("buzz");
   }, 2000);
 }
-
-setInterval(() => {
-  shakeImage();
-  switchImage();
-}, 10000);
 
 // Function to switch images
 function switchImage() {
