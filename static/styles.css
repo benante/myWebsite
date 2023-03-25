@@ -89,13 +89,6 @@ section,
 .preview-btn:hover {
   cursor: pointer;
 }
-.popUp {
-  display: block;
-  width: 100%;
-  border: 1px solid black;
-  border-radius: 10px;
-  box-shadow: 0 11px black;
-}
 
 /* FORM */
 .form-container {
@@ -132,7 +125,13 @@ section,
 .preview {
   display: none;
 }
-
+.popUp {
+  display: block;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 11px black;
+}
 /* FONTS */
 .intro p {
   font-size: medium;
